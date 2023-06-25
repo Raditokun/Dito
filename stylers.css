@@ -1,0 +1,28 @@
+body {
+                
+    margin: 50px;
+    background-color: blue;
+    color: black;
+}
+div{
+    padding: 20px;
+    border: 1px solid blanchedalmond;
+}
+nav li {
+    display: inline-block 
+}
+nav a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: brown;
+}
+nav a:hover {
+    background-color: black;
+    color:blue;
+}
+.content {
+    background-color:burlywood;
+    color:blanchedalmond;
+
+}
