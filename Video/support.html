@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">jawascript</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarnav"
+        aria-controls="navbarnav"
+        aria-expanded="false"
+        aria-label="toggle-navigation">
+        <span class="navbar-toggler-icon"> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarnav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="socials.html">socials</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="support.html">support</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <form>
+        <div class="mb-3">
+          <label for="num1" class="form-label">Number 1</label>
+          <input type="number" class="form-control" id="num1" />
+        </div>
+        <div class="mb-3">
+          <label for="num2" class="form-label">Number 2</label>
+          <input type="number" class="form-control" id="num2" />
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="operasi()">
+          Submit
+        </button>
+        <button type="button" class="btn btn-primary" onclick="toggleresult()">
+          Show
+        </button>
+      </form>
+      <div id="result-container" class="alert alert-success mt-4" hidden>
+        <h3>Hasil <small class="text-muted">operasi</small></h3>
+        <div id="result"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      function operasi() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+
+        var sum = num1 + num2;
+        var sub = num1 - num2;
+        var ply = num1 * num2;
+        var div = num1 / num2;
+        var per = num1 % num2;
+        var expo = num1 ** num2;
+
+        var result = document.getElementById("result");
+        result.innerHTML = "sum " + sum + "<br>";
+        result.innerHTML += "sub " + sub + "<br>";
+        result.innerHTML += "ply " + ply + "<br>";
+        result.innerHTML += "div " + div + "<br>";
+        result.innerHTML += "per " + per + "<br>";
+        result.innerHTML += "expo " + expo + "<br>";
+        result.innerHTML += "num1 bilangan " + checkOddEven(num1) + "<br>";
+        result.innerHTML += "num2 bilangan " + checkOddEven(num2) + "<br>";
+        var container = document.getElementById("result-container");
+        container.hidden = false;
+      }
+      function checkOddEven(num) {
+        let hasil;
+        if (num % 2 === 0) {
+          hasil = "genap";
+        } else {
+          hasil = "ganjil";
+        }
+        return hasil;
+      }
+      function toggleresult() {
+        var resultcontainer = document.getElementById("result-container");
+        if (resultcontainer.hidden === true) {
+          resultcontainer.hidden = false;
+        } else {
+          resultcontainer.hidden = true;
+        }
+      }
+    </script>
+  </body>
+</html>

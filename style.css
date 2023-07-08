@@ -2,7 +2,12 @@ div {
     text-align: center;
 }
  nav li {
-display: inline-block 
+display: block;
+
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
 }
 nav a{
 display: block;

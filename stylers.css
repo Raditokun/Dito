@@ -1,28 +1,34 @@
-body {
-                
-    margin: 50px;
-    background-color: blue;
-    color: black;
+@media screen and (max-width: 767px) {
+  nav ul {
+    flex-direction: column;
+  }
 }
-div{
-    padding: 20px;
-    border: 1px solid blanchedalmond;
+body {
+  padding: 0;
+  background-color: blue;
+  color: black;
+}
+div {
+  padding: 20px;
+  border: 1px solid blueviolet;
 }
 nav li {
-    display: inline-block 
+  display: block;
 }
-nav a{
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: brown;
+nav ul {
+  display: flex;
+}
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: brown;
 }
 nav a:hover {
-    background-color: black;
-    color:blue;
+  background-color: black;
+  color: blue;
 }
 .content {
-    background-color:burlywood;
-    color:blanchedalmond;
-
+  background-color: burlywood;
+  color: blanchedalmond;
 }
