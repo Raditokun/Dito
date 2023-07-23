@@ -36,15 +36,28 @@
           <li class="nav-item">
             <a class="nav-link" href="support.html">support</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">order</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <div class="container mt-4">
       <form>
-        <div class="mb-3">
-          <label for="nametest" class="form-label">Name</label>
-          <input type="text" class="form-control" id="nametest" />
+        <div class="row mb-3">
+          <div class="col">
+            <label for="nametest" class="form-label">Name Depan</label>
+            <input type="text" class="form-control" id="firstnametest" />
+          </div>
+          <div class="col">
+            <label for="nametest" class="form-label">Surname</label>
+            <input type="text" class="form-control" id="surnametest" />
+          </div>
+          <div class="col">
+            <label for="nametest" class="form-label">Nama Belakang</label>
+            <input type="text" class="form-control" id="lastnametest" />
+          </div>
         </div>
         <div class="mb-3">
           <label for="emailtest" class="form-label">Email address</label>
@@ -55,9 +68,45 @@
           <input type="password" class="form-control" id="passwordtest" />
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" onclick="operasi()" class="btn btn-primary">
+          Submit
+        </button>
       </form>
+      <div id="table" hidden>
+        <h1>Result</h1>
+        <table class="table">
+          <tr>
+            <th>Nama lengkap</th>
+            <td id="Nama"></td>
+          </tr>
+          <tr>
+            <th>email</th>
+            <td id="Email"></td>
+          </tr>
+        </table>
+      </div>
     </div>
+    <script>
+      function operasi() {
+        var firstnametest = document.getElementById("firstnametest").value;
+        var surnametest = document.getElementById("surnametest").value;
+        var lastnametest = document.getElementById("lastnametest").value;
+        let fullname = firstnametest;
+        if (surnametest !== "") {
+          fullname += " " + surnametest;
+        }
+        fullname += " " + lastnametest;
+
+        var email = document.getElementById("emailtest").value;
+        var tempatnama = document.getElementById("Nama");
+        var tempatemail = document.getElementById("Email");
+        tempatnama.innerHTML = fullname;
+        tempatemail.innerHTML = email;
+        var container = document.getElementById("table");
+        container.hidden = false;
+        alert(fullname);
+      }
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

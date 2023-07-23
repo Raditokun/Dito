@@ -50,33 +50,38 @@
       </head>
       <body>
         <header>
-          <h1>About Me</h1>
+          <h1>Welcome to Otonoko Coffee</h1>
         </header>
 
         <section id="about">
-          <h2>About</h2>
-          <p>
-            Welcome to my personal website! My name is Dito, and I am a Full
-            stack web developer from Indonesia. Feel free to explore and learn
-            more about me.
-          </p>
-        </section>
-
-        <section id="skills">
-          <h2>Skills</h2>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
+          <h2>Menu</h2>
+          <ul id="Menu">
+            <li>Decaf</li>
+            <li>latte</li>
+            <li>Expresso</li>
           </ul>
         </section>
 
-        <section id="contact">
-          <h2>Contact</h2>
-          <p>
-            please visit <a href="support.html">here</a> for support and
-            questions
-          </p>
+        <section id="Order">
+          <h2>Order Here!</h2>
+          <form id="Orderform">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="minuman">Pilih Minuman:</label>
+              <select class="form-control" id="drink" required>
+                <option value="">Select a drink</option>
+                <option value="Decaf">Decaf</option>
+                <option value="latte">Latte</option>
+                <option value="Expresso">Expresso</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary" id="button">
+              Place Order
+            </button>
+          </form>
         </section>
 
         <footer>
@@ -84,6 +89,20 @@
         </footer>
       </body>
     </div>
+    <script>
+      document.getElementById("button").addEventListener("click", () => {
+        var name = document.getElementById("name").value;
+        var drink = document.getElementById("drink").value;
+
+        alert(
+          " thank you " +
+            name +
+            " for your order of " +
+            drink +
+            " Has been confirmed "
+        );
+      });
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

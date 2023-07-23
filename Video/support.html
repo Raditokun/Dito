@@ -36,12 +36,15 @@
           <li class="nav-item active">
             <a class="nav-link" href="support.html">support</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">order</a>
+          </li>
         </ul>
       </div>
     </nav>
     <div>
       <body>
-        <main>
+        <main class="m-4">
           <h1>FAQ</h1>
 
           <h2>anda siapa</h2>
@@ -99,14 +102,14 @@
         var expo = num1 ** num2;
 
         var result = document.getElementById("result");
-        result.innerHTML = "sum " + sum + "<br>";
-        result.innerHTML += "sub " + sub + "<br>";
-        result.innerHTML += "ply " + ply + "<br>";
-        result.innerHTML += "div " + div + "<br>";
-        result.innerHTML += "per " + per + "<br>";
-        result.innerHTML += "expo " + expo + "<br>";
-        result.innerHTML += "num1 bilangan " + checkOddEven(num1) + "<br>";
-        result.innerHTML += "num2 bilangan " + checkOddEven(num2) + "<br>";
+        result.innerHTML = "addition: " + sum + "<br>";
+        result.innerHTML += "Substration: " + sub + "<br>";
+        result.innerHTML += "Multyplication: " + ply + "<br>";
+        result.innerHTML += "divide: " + div + "<br>";
+        result.innerHTML += "per: " + per + "<br>";
+        result.innerHTML += "exposition: " + expo + "<br>";
+        result.innerHTML += "num1 bilangan: " + checkOddEven(num1) + "<br>";
+        result.innerHTML += "num2 bilangan: " + checkOddEven(num2) + "<br>";
         var container = document.getElementById("result-container");
         container.hidden = false;
       }
