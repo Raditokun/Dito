@@ -1,0 +1,346 @@
+#about {
+  text-align: center;
+}
+
+/*
+1- Images in this code should be changed by your images, change the path in src="/img/s3.png".
+2- To edit the height of the carousel and images, you can aply the height attribute to the carousel 
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel" style="height: 300px;">
+or to the image: 
+<img src="/img/s1.png" class="w-100 d-block" alt="First slide" height="400px;">
+*/
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  border-radius: 15px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+a {
+  text-decoration: none !important;
+}
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background: #0f2027; /* fallback for old browsers */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 15px;
+}
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+.socialIcon {
+  color: white;
+}
+.socialContainer:hover .socialIcon {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+:root {
+  --clr-primary: teal;
+  --clr-secondary: crimson;
+  --bg-primary: #0d1a2d;
+  --bg-secondary: #14273e;
+  --text-primary: #fff;
+  --text-secondary: #ccc;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark;
+}
+body {
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+ul:where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section {
+  padding-block: clamp(2rem, 5vw, 5rem);
+}
+a {
+  color: cyan;
+  text-decoration: none;
+}
+.container {
+  width: min(100% - 2rem, 65rem);
+  margin-inline: auto;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(35ch, 100%), 1fr));
+}
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 0.5em;
+}
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flow-content {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+[data-spacing="sm"] {
+  gap: 0.25rem;
+}
+
+.mx-auto {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.wrapper .tiktok:hover,
+.wrapper .tiktok:hover .tooltip,
+.wrapper .tiktok:hover .tooltip::before {
+  background: #000000;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #7a21b6;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #cd201f;
+  color: #ffffff;
+}
+
+.my-card {
+  position: absolute;
+  left: 40%;
+  top: -20px;
+  border-radius: 50%;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
